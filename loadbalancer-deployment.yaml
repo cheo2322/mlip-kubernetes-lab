@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: flask-load-balancer
 spec:
-  replicas: 1 
+  replicas: 1
   selector:
     matchLabels:
       app: flask-load-balancer
@@ -13,8 +13,7 @@ spec:
         app: flask-load-balancer
     spec:
       containers:
-      - name: flask-load-balancer
-        # TODO: Replace <your-dockerhub-username> with your Docker Hub username
-        image: <your-dockerhub-username>/<loadbalancer-image-name>:1.0.0
-        ports:
-        - containerPort: 8080
+        - name: flask-load-balancer
+          image: cheohidalgo/load_balancer:1.0.0
+          ports:
+            - containerPort: 8080

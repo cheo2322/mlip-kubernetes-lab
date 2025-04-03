@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: flask-load-balancer-service 
+  name: flask-load-balancer-service
 spec:
   type: NodePort
   selector:
@@ -9,4 +9,4 @@ spec:
   ports:
     - port: 80
       targetPort: 8080
-      nodePort: 30080 
+      nodePort: 30080
